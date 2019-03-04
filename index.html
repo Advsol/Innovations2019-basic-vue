@@ -1,0 +1,32 @@
+
+
+<!--
+Demo use of polyfill attribute and how it de-dupoes on filename alone
+demo use of attributes defer/async, i.e. defer will break this iPart.
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js"  polyfill defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.8/vue.min.js" polyfill defer></script>
+-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.8/vue.min.js" polyfill></script>
+
+
+<input type="hidden" id="x-contentItemKey" value="[x-contentItemKey]">
+<input type="hidden" id="x-contentKey" value="[x-contentKey]">
+
+    <div id="hello-world-app">
+      <h1>{{ msg }}</h1>
+    </div>
+
+
+
+    <script>
+      new Vue({
+        el: "#hello-world-app",
+        data() {
+          return {
+            msg: "Hello World!"
+          }
+        }
+      });
+    </script>
